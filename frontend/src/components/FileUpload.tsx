@@ -32,7 +32,7 @@ const FileUpload: React.FC<FileUploadProps> = ({ onUploadSuccess }) => {
 
     try {
       const response = await axios.post<{ creditReport: CreditReport }>(
-        "http://localhost:3000/upload",
+        "https://reportback.onrender.com/upload",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
